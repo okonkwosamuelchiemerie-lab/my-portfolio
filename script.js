@@ -1,108 +1,126 @@
-// Theme Toggle
+// ===== THEME TOGGLE =====
 function toggleTheme() {
     const html = document.documentElement;
-    const icons = document.querySelectorAll('.theme-toggle i');
     const current = html.getAttribute('data-theme');
     const next = current === 'light' ? 'dark' : 'light';
     html.setAttribute('data-theme', next);
     localStorage.setItem('theme', next);
-    icons.forEach(i => i.className = next === 'light' ? 'fas fa-sun' : 'fas fa-moon');
+    updateThemeIcons(next);
+}
+
+function updateThemeIcons(theme) {
+    const iconClass = theme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
+    document.querySelectorAll('.theme-toggle i').forEach(i => {
+        i.className = iconClass;
+    });
 }
 
 const savedTheme = localStorage.getItem('theme') || 'dark';
 document.documentElement.setAttribute('data-theme', savedTheme);
-document.querySelectorAll('.theme-toggle i').forEach(i => {
-    i.className = savedTheme === 'light' ? 'fas fa-sun' : 'fas fa-moon';
-});
+updateThemeIcons(savedTheme);
 
-// Mobile Nav — FIXED
-function toggleMobileNav() {
-    const mobileNav = document.getElementById('mobileNav');
-    const overlay = document.querySelector('.overlay');
-    const hamburger = document.querySelector('.hamburger');
-    
-    if (!mobileNav || !overlay || !hamburger) return;
-    
-    const isActive = mobileNav.classList.contains('active');
-    
-    if (isActive) {
-        mobileNav.classList.remove('active');
-        overlay.classList.remove('active');
-        hamburger.classList.remove('active');
-        document.body.style.overflow = '';
+// ===== MOBILE NAVIGATION =====
+const hamburger = document.getElementById('hamburger');
+const mobileNav = document.getElementById('mobileNav');
+const overlay = document.getElementById('overlay');
+const mobileLinks = document.querySelectorAll('.mobile-nav .nav-links a');
+
+function openMenu() {
+    hamburger.classList.add('active');
+    mobileNav.classList.add('active');
+    overlay.classList.add('active');
+    document.body.classList.add('menu-open');
+}
+
+function closeMenu() {
+    hamburger.classList.remove('active');
+    mobileNav.classList.remove('active');
+    overlay.classList.remove('active');
+    document.body.classList.remove('menu-open');
+}
+
+function toggleMenu() {
+    if (mobileNav.classList.contains('active')) {
+        closeMenu();
     } else {
-        mobileNav.classList.add('active');
-        overlay.classList.add('active');
-        hamburger.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        openMenu();
     }
 }
 
-// Close mobile nav on Escape key
+if (hamburger) hamburger.addEventListener('click', toggleMenu);
+if (overlay) overlay.addEventListener('click', closeMenu);
+
+mobileLinks.forEach(link => {
+    link.addEventListener('click', closeMenu);
+});
+
 document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-        const mobileNav = document.getElementById('mobileNav');
-        if (mobileNav && mobileNav.classList.contains('active')) {
-            toggleMobileNav();
-        }
+    if (e.key === 'Escape' && mobileNav.classList.contains('active')) {
+        closeMenu();
     }
 });
 
-// Auto-close mobile nav when resizing to desktop
 window.addEventListener('resize', () => {
-    if (window.innerWidth > 768) {
-        const mobileNav = document.getElementById('mobileNav');
-        if (mobileNav && mobileNav.classList.contains('active')) {
-            toggleMobileNav();
-        }
+    if (window.innerWidth > 768 && mobileNav.classList.contains('active')) {
+        closeMenu();
     }
 });
 
-// Navbar scroll
+// ===== NAVBAR SCROLL =====
+const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
-    const navbar = document.getElementById('navbar');
     if (navbar) {
         navbar.classList.toggle('scrolled', window.scrollY > 50);
     }
 });
 
-// Scroll Reveal
-const observer = new IntersectionObserver((entries) => {
+// ===== SCROLL REVEAL =====
+const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('active');
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
     });
 }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
 
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// Form
-function handleSubmit(e) {
-    e.preventDefault();
-    const btn = e.target.querySelector('button');
-    const original = btn.innerHTML;
-    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-    btn.disabled = true;
-    setTimeout(() => {
-        btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
-        btn.style.background = '#22c55e';
-        e.target.reset();
+// ===== CONTACT FORM =====
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('button[type="submit"]');
+        const originalHTML = btn.innerHTML;
+        
+        btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        btn.disabled = true;
+        
         setTimeout(() => {
-            btn.innerHTML = original;
-            btn.style.background = '';
-            btn.disabled = false;
-        }, 3000);
-    }, 1500);
+            btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+            btn.style.background = '#22c55e';
+            this.reset();
+            
+            setTimeout(() => {
+                btn.innerHTML = originalHTML;
+                btn.style.background = '';
+                btn.disabled = false;
+            }, 3000);
+        }, 1500);
+    });
 }
 
-// Year
+// ===== YEAR =====
 const yearEl = document.getElementById('year');
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-// Smooth scroll
+// ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
     });
 });

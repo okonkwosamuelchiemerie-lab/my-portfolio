@@ -14,17 +14,21 @@
     <nav id="navbar">
         <div class="nav-container">
             <a href="#home" class="logo">Samuel<span>.</span></a>
-            <ul class="nav-links">
+            
+            <ul class="nav-links" id="navLinks">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#skills">Skills</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
+
             <div class="nav-cta">
-                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme"><i class="fas fa-moon"></i></button>
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <a href="#contact" class="btn-small">Hire Me</a>
-                <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+                <button class="hamburger" id="hamburger" aria-label="Menu">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -34,15 +38,19 @@
     </nav>
 
     <!-- Mobile Navigation -->
-    <div class="overlay" onclick="toggleMobileNav()"></div>
+    <div class="overlay" id="overlay"></div>
     <div class="mobile-nav" id="mobileNav">
         <ul class="nav-links">
-            <li><a href="#home" onclick="toggleMobileNav()">Home</a></li>
-            <li><a href="#about" onclick="toggleMobileNav()">About</a></li>
-            <li><a href="#skills" onclick="toggleMobileNav()">Skills</a></li>
-            <li><a href="#projects" onclick="toggleMobileNav()">Projects</a></li>
-            <li><a href="#contact" onclick="toggleMobileNav()">Contact</a></li>
-            <li><button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme"><i class="fas fa-moon"></i></button></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li>
+                <button class="theme-toggle" id="mobileThemeToggle" title="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </li>
         </ul>
     </div>
 
@@ -391,7 +399,7 @@
                 </div>
             </div>
             <div class="contact-form reveal">
-                <form onsubmit="handleSubmit(event)">
+                <form id="contactForm">
                     <div class="form-group">
                         <label for="name">Your Name</label>
                         <input type="text" id="name" placeholder="John Doe" required>
