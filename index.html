@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Okonkwo Samuel Chiemerie — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">Samuel<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-cta">
+                <button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme"><i class="fas fa-moon"></i></button>
+                <a href="#contact" class="btn-small">Hire Me</a>
+                <button class="hamburger" onclick="toggleMobileNav()" aria-label="Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <div class="overlay" onclick="toggleMobileNav()"></div>
+    <div class="mobile-nav" id="mobileNav">
+        <ul class="nav-links">
+            <li><a href="#home" onclick="toggleMobileNav()">Home</a></li>
+            <li><a href="#about" onclick="toggleMobileNav()">About</a></li>
+            <li><a href="#skills" onclick="toggleMobileNav()">Skills</a></li>
+            <li><a href="#projects" onclick="toggleMobileNav()">Projects</a></li>
+            <li><a href="#contact" onclick="toggleMobileNav()">Contact</a></li>
+            <li><button class="theme-toggle" onclick="toggleTheme()" title="Toggle theme"><i class="fas fa-moon"></i></button></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="hero-tag">
+                    <span class="dot"></span>
+                    Available for work
+                </div>
+                <h1>
+                    Hi, I'm <span class="name">Okonkwo Samuel Chiemerie</span>
+                </h1>
+                <p>
+                    I'm a Website Developer and UI/UX Designer. I craft beautiful, 
+                    functional digital experiences that connect brands with their audience.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i> View My Work
+                    </a>
+                    <a href="https://www.figma.com/proto/8cDfmlRZECRITtYgtXdDQj/PROJECT?node-id=305-6&t=jRQCwSOfsVytlKXF-1" target="_blank" class="btn btn-secondary">
+                        <i class="fab fa-figma"></i> View Figma
+                    </a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://dribbble.com" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                    <a href="https://www.figma.com/proto/8cDfmlRZECRITtYgtXdDQj/PROJECT?node-id=305-6&t=jRQCwSOfsVytlKXF-1" target="_blank" aria-label="Figma"><i class="fab fa-figma"></i></a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <div class="floating-shape one"></div>
+                    <div class="floating-shape two"></div>
+                    <div class="hero-image">
+                        <img src="https://i.pinimg.com/1200x/5c/e9/d5/5ce9d55d2e67a3f66e3a41ba6042d683.jpg" alt="Okonkwo Samuel Chiemerie">
+                    </div>
+                    <div class="hero-badge">
+                        <div class="number">5+</div>
+                        <div class="label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="section-header reveal">
+            <span class="section-tag">About Me</span>
+            <h2>Who I Am</h2>
+            <p>A passionate developer and designer with a love for creating amazing digital experiences.</p>
+        </div>
+        <div class="about-grid">
+            <div class="about-image-area reveal">
+                <div class="about-img">
+                    <img src="https://i.pinimg.com/1200x/5c/e9/d5/5ce9d55d2e67a3f66e3a41ba6042d683.jpg" alt="Okonkwo Samuel Chiemerie">
+                </div>
+            </div>
+            <div class="about-content reveal">
+                <h3>Designing & Building the Future of the Web</h3>
+                <p>
+                    I'm Okonkwo Samuel Chiemerie, a Website Developer and UI/UX Designer based in Nigeria. 
+                    I specialize in creating modern, responsive websites and intuitive user interfaces 
+                    that not only look great but also deliver exceptional user experiences.
+                </p>
+                <p>
+                    With expertise in both development and design, I bridge the gap between aesthetics 
+                    and functionality. Whether it's a sleek landing page, a complex web application, 
+                    or a complete brand identity system — I bring ideas to life with precision and creativity.
+                </p>
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <div class="num">50+</div>
+                        <div class="lbl">Projects Completed</div>
+                    </div>
+                    <div class="about-stat">
+                        <div class="num">30+</div>
+                        <div class="lbl">Happy Clients</div>
+                    </div>
+                    <div class="about-stat">
+                        <div class="num">100%</div>
+                        <div class="lbl">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <div class="section-header reveal">
+            <span class="section-tag">My Expertise</span>
+            <h2>Skills & Technologies</h2>
+            <p>Tools and technologies I use to bring ideas to life.</p>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card reveal">
+                <div class="icon"><i class="fas fa-code"></i></div>
+                <h3>Frontend Development</h3>
+                <p>Building responsive and interactive user interfaces with modern frameworks.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">HTML5</span>
+                    <span class="skill-tag">CSS3</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">React</span>
+                    <span class="skill-tag">Tailwind CSS</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="icon"><i class="fas fa-paint-brush"></i></div>
+                <h3>UI/UX Design</h3>
+                <p>Designing intuitive and beautiful interfaces that users love.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Figma</span>
+                    <span class="skill-tag">Adobe XD</span>
+                    <span class="skill-tag">Prototyping</span>
+                    <span class="skill-tag">Wireframing</span>
+                    <span class="skill-tag">User Research</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="icon"><i class="fas fa-server"></i></div>
+                <h3>Backend Development</h3>
+                <p>Creating robust APIs and server-side solutions for scalable applications.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Node.js</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">PHP</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">MongoDB</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="icon"><i class="fas fa-mobile-alt"></i></div>
+                <h3>Responsive Design</h3>
+                <p>Ensuring websites look perfect on every device and screen size.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Mobile-First</span>
+                    <span class="skill-tag">Flexbox</span>
+                    <span class="skill-tag">CSS Grid</span>
+                    <span class="skill-tag">Media Queries</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="icon"><i class="fas fa-search"></i></div>
+                <h3>SEO & Performance</h3>
+                <p>Optimizing websites for speed, accessibility, and search engine visibility.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">SEO</span>
+                    <span class="skill-tag">Core Web Vitals</span>
+                    <span class="skill-tag">Accessibility</span>
+                    <span class="skill-tag">Analytics</span>
+                </div>
+            </div>
+            <div class="skill-card reveal">
+                <div class="icon"><i class="fas fa-palette"></i></div>
+                <h3>Brand Identity</h3>
+                <p>Crafting cohesive visual identities that tell your brand's story.</p>
+                <div class="skill-tags">
+                    <span class="skill-tag">Logo Design</span>
+                    <span class="skill-tag">Color Theory</span>
+                    <span class="skill-tag">Typography</span>
+                    <span class="skill-tag">Style Guides</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="section-header reveal">
+            <span class="section-tag">Portfolio</span>
+            <h2>Featured Projects</h2>
+            <p>Some of my recent work that I'm proud of.</p>
+        </div>
+        <div class="projects-grid">
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="E-Commerce Platform">
+                    <div class="overlay-icon"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-featured online store with real-time inventory, payment processing, and admin dashboard.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React</span>
+                        <span class="project-tag">Node.js</span>
+                        <span class="project-tag">Stripe</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=500&fit=crop" alt="Analytics Dashboard">
+                    <div class="overlay-icon"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>Analytics Dashboard</h3>
+                    <p>Real-time data visualization dashboard with customizable widgets and export features.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Vue.js</span>
+                        <span class="project-tag">D3.js</span>
+                        <span class="project-tag">Firebase</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop" alt="Social Media App">
+                    <div class="overlay-icon"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>Social Media App</h3>
+                    <p>A modern social platform with real-time messaging, stories, and content recommendations.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">React Native</span>
+                        <span class="project-tag">Socket.io</span>
+                        <span class="project-tag">AWS</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800&h=500&fit=crop" alt="Brand Identity">
+                    <div class="overlay-icon"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>Brand Identity System</h3>
+                    <p>Complete brand identity including logo, color palette, typography, and design guidelines.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Figma</span>
+                        <span class="project-tag">Illustrator</span>
+                        <span class="project-tag">Branding</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://www.figma.com/proto/8cDfmlRZECRITtYgtXdDQj/PROJECT?node-id=305-6&t=jRQCwSOfsVytlKXF-1" target="_blank"><i class="fab fa-figma"></i> View on Figma</a>
+                        <a href="#"><i class="fas fa-file-pdf"></i> Case Study</a>
+                    </div>
+                </div>
+            </div>
+            <!-- NEW: Paws & Pedigree Project -->
+            <div class="project-card reveal">
+                <div class="project-image">
+                    <img src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=800&h=500&fit=crop" alt="Paws & Pedigree Kennel">
+                    <div class="overlay-icon"><i class="fas fa-arrow-up-right-from-square"></i></div>
+                </div>
+                <div class="project-content">
+                    <h3>Paws & Pedigree Kennel</h3>
+                    <p>A responsive website for a dog breeding kennel featuring puppy listings, health guarantees, and customer testimonials.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://paws-and-pedigree.vercel.app/" target="_blank"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Figma Embed Section -->
+    <section>
+        <div class="section-header reveal" style="text-align:center; margin-bottom: 3rem;">
+            <span class="section-tag">Figma Design</span>
+            <h2>My Latest Figma Work</h2>
+            <p>Explore my design prototype directly below.</p>
+        </div>
+        <div class="figma-embed-wrapper reveal" style="max-width: 1000px; margin: 0 auto;">
+            <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 20px; border: 1px solid var(--border); background: var(--surface);">
+                <iframe 
+                    style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;"
+                    src="https://embed.figma.com/design/8cDfmlRZECRITtYgtXdDQj/PROJECT?node-id=305-6&embed-host=share" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div style="text-align: center; margin-top: 1.5rem;">
+                <a href="https://www.figma.com/proto/8cDfmlRZECRITtYgtXdDQj/PROJECT?node-id=305-6&t=jRQCwSOfsVytlKXF-1" target="_blank" class="btn btn-secondary">
+                    <i class="fab fa-figma"></i> Open Full Prototype
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-header reveal">
+            <span class="section-tag">Get In Touch</span>
+            <h2>Let's Work Together</h2>
+            <p>Have a project in mind? I'd love to hear about it.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Let's Build Something Amazing</h3>
+                <p>
+                    Whether you need a stunning website, a complete UI/UX redesign, 
+                    or a brand identity system — I'm here to help bring your vision to life.
+                </p>
+                <div class="contact-items">
+                    <a href="mailto:okonkwosamuelchiemerie@gmail.com" class="contact-item">
+                        <div class="icon"><i class="fas fa-envelope"></i></div>
+                        <div class="info">
+                            <h4>Email</h4>
+                            <span>okonkwosamuelchiemerie@gmail.com</span>
+                        </div>
+                    </a>
+                    <a href="https://wa.me/2348163013017" target="_blank" class="contact-item">
+                        <div class="icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="info">
+                            <h4>WhatsApp</h4>
+                            <span>+234 816 301 3017</span>
+                        </div>
+                    </a>
+                    <a href="https://www.figma.com/proto/8cDfmlRZECRITtYgtXdDQj/PROJECT?node-id=305-6&t=jRQCwSOfsVytlKXF-1" target="_blank" class="contact-item">
+                        <div class="icon"><i class="fab fa-figma"></i></div>
+                        <div class="info">
+                            <h4>Figma</h4>
+                            <span>View My Designs</span>
+                        </div>
+                    </a>
+                    <div class="contact-item">
+                        <div class="icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="info">
+                            <h4>Location</h4>
+                            <span>Nigeria</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="contact-form reveal">
+                <form onsubmit="handleSubmit(event)">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" placeholder="John Doe" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" placeholder="john@example.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="Project Inquiry" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Built with <span class="heart">❤</span> by Okonkwo Samuel Chiemerie &copy; <span id="year"></span></p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
