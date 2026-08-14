@@ -953,6 +953,7 @@ footer .heart {
 .mobile-nav.active { right: 0; }
 
 .mobile-nav .nav-links {
+    display: flex !important;
     flex-direction: column;
     gap: 2rem;
     align-items: flex-start;
@@ -994,7 +995,7 @@ footer .heart {
 @media (max-width: 768px) {
     nav { padding: 1.2rem 1.5rem; }
     nav.scrolled { padding: 1rem 1.5rem; }
-    .nav-links { display: none; }
+    .nav-container > .nav-links { display: none; }
     .hamburger { display: flex; }
     .btn-small { display: none; }
     section { padding: 5rem 1.5rem; }
