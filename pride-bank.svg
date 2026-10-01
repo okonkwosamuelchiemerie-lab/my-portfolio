@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1b0f3a"/><stop offset="1" stop-color="#5b2bd6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <circle cx="680" cy="80" r="140" fill="#ffffff" opacity="0.06"/>
+  <circle cx="90" cy="440" r="170" fill="#ffffff" opacity="0.05"/>
+  <text x="60" y="110" font-family="Arial, sans-serif" font-size="40" font-weight="800" fill="#fff" letter-spacing="3">PRIDE <tspan fill="#f5c451" font-style="italic">BANK</tspan></text>
+  <text x="60" y="165" font-family="Arial, sans-serif" font-size="24" fill="#d9ccff">Banking that carries your pride.</text>
+  <rect x="60" y="215" width="330" height="200" rx="22" fill="#ffffff" opacity="0.12"/>
+  <rect x="85" y="245" width="60" height="42" rx="8" fill="#f5c451"/>
+  <text x="85" y="345" font-family="Arial, sans-serif" font-size="26" fill="#fff" letter-spacing="3">•••• •••• •••• 4821</text>
+  <text x="85" y="390" font-family="Arial, sans-serif" font-size="16" fill="#d9ccff">ADAEZE N.</text>
+  <rect x="440" y="215" width="300" height="90" rx="16" fill="#ffffff" opacity="0.14"/>
+  <text x="465" y="252" font-family="Arial, sans-serif" font-size="15" fill="#d9ccff">Balance</text>
+  <text x="465" y="287" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#fff">₦250,000.00</text>
+  <rect x="440" y="325" width="300" height="90" rx="16" fill="#ffffff" opacity="0.14"/>
+  <text x="465" y="362" font-family="Arial, sans-serif" font-size="15" fill="#d9ccff">Transfer sent</text>
+  <text x="465" y="397" font-family="Arial, sans-serif" font-size="30" font-weight="700" fill="#7ee8a6">₦50,000</text>
+</svg>

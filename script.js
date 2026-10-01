@@ -1,11 +1,7 @@
 // ===== THEME TOGGLE =====
-function toggleTheme() {
-    const html = document.documentElement;
-    const current = html.getAttribute('data-theme');
-    const next = current === 'light' ? 'dark' : 'light';
-    html.setAttribute('data-theme', next);
-    localStorage.setItem('theme', next);
-    updateThemeIcons(next);
+function getSavedTheme() {
+    try { return localStorage.getItem('theme') || 'dark'; }
+    catch (e) { return 'dark'; }
 }
 
 function updateThemeIcons(theme) {
@@ -13,9 +9,25 @@ function updateThemeIcons(theme) {
     document.querySelectorAll('.theme-toggle i').forEach(i => {
         i.className = iconClass;
     });
+    document.querySelectorAll('.theme-toggle').forEach(btn => {
+        btn.setAttribute('aria-label', theme === 'light' ? 'Switch to dark mode' : 'Switch to light mode');
+    });
 }
 
-const savedTheme = localStorage.getItem('theme') || 'dark';
+function toggleTheme() {
+    const current = document.documentElement.getAttribute('data-theme') || 'dark';
+    const next = current === 'light' ? 'dark' : 'light';
+    document.documentElement.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+    updateThemeIcons(next);
+}
+
+// FIX: the buttons have no inline onclick any more, so they must be wired up here
+document.querySelectorAll('.theme-toggle').forEach(btn => {
+    btn.addEventListener('click', toggleTheme);
+});
+
+const savedTheme = getSavedTheme();
 document.documentElement.setAttribute('data-theme', savedTheme);
 updateThemeIcons(savedTheme);
 

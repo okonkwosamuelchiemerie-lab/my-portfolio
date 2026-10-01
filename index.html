@@ -7,6 +7,14 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script>
+        /* Apply saved theme before first paint (no dark/light flash) */
+        (function () {
+            var t = 'dark';
+            try { t = localStorage.getItem('theme') || 'dark'; } catch (e) {}
+            document.documentElement.setAttribute('data-theme', t);
+        })();
+    </script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -234,20 +242,20 @@
         <div class="projects-grid">
             <div class="project-card reveal">
                 <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=500&fit=crop" alt="E-Commerce Platform">
+                    <a href="https://pride-bank-app.vercel.app/" target="_blank" rel="noopener"><img src="pride-bank.svg" alt="Pride Bank digital banking app"></a>
                     <div class="overlay-icon"><i class="fas fa-arrow-up-right-from-square"></i></div>
                 </div>
                 <div class="project-content">
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-featured online store with real-time inventory, payment processing, and admin dashboard.</p>
+                    <h3>Pride Bank App</h3>
+                    <p>A digital banking web app with account signup, PIN-protected transfers, transaction history, card controls and loan requests.</p>
                     <div class="project-tags">
-                        <span class="project-tag">React</span>
-                        <span class="project-tag">Node.js</span>
-                        <span class="project-tag">Stripe</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                        <a href="https://pride-bank-app.vercel.app/" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://pride-bank-app.vercel.app/signup.html" target="_blank" rel="noopener"><i class="fas fa-user-plus"></i> Try It Out</a>
                     </div>
                 </div>
             </div>
@@ -272,20 +280,20 @@
             </div>
             <div class="project-card reveal">
                 <div class="project-image">
-                    <img src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=800&h=500&fit=crop" alt="Social Media App">
+                    <a href="https://apexcrypto-site.vercel.app/home_crypto.html" target="_blank" rel="noopener"><img src="apex-crypto.svg" alt="ApexCrypto cryptocurrency platform website"></a>
                     <div class="overlay-icon"><i class="fas fa-arrow-up-right-from-square"></i></div>
                 </div>
                 <div class="project-content">
-                    <h3>Social Media App</h3>
-                    <p>A modern social platform with real-time messaging, stories, and content recommendations.</p>
+                    <h3>ApexCrypto Website</h3>
+                    <p>A multi-page cryptocurrency platform site with price listings, trending tokens, earn and payment pages, plus login and signup screens.</p>
                     <div class="project-tags">
-                        <span class="project-tag">React Native</span>
-                        <span class="project-tag">Socket.io</span>
-                        <span class="project-tag">AWS</span>
+                        <span class="project-tag">HTML</span>
+                        <span class="project-tag">CSS</span>
+                        <span class="project-tag">JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                        <a href="#"><i class="fab fa-github"></i> Source Code</a>
+                        <a href="https://apexcrypto-site.vercel.app/home_crypto.html" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                        <a href="https://apexcrypto-site.vercel.app/Prices.html" target="_blank" rel="noopener"><i class="fas fa-chart-line"></i> View Prices</a>
                     </div>
                 </div>
             </div>
